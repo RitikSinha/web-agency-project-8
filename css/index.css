@@ -28,7 +28,10 @@ nav {
   display: flex;
   margin-top: 20px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: 10px;
 }
 .nav-items {
   display: flex;
@@ -46,31 +49,32 @@ nav {
   font-size: 0.8rem;
   border: none;
   border-radius: 100px;
+  margin-right: 20px;
 }
 /* hero section */
 .intro-section {
   width: 100vw;
   display: flex;
+  justify-content: space-between;
 }
 .left-section {
-  position: relative;
-  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 10%;
-  padding-top: 10%;
+  justify-content: center;
+  margin-left: 10px;
 }
 .left-section h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   font-display: swap;
   color: var(--blue);
+  font-weight: 700;
 }
 .left-section h4 {
   color: #414141;
-  font-size: 0.9rem;
-  margin-top: 10%;
-  width: 70%;
+  font-size: 1rem;
+  margin-top: 40px;
+  line-height: 30px;
 }
 .learn-more-btn {
   background: linear-gradient(90deg, var(--gleft), var(--gright));
@@ -79,36 +83,82 @@ nav {
   font-size: 1.2rem;
   border: none;
   border-radius: 100px;
-  margin-top: 10%;
+  margin-top: 30px;
 }
 .imgs-div {
-  content: "";
-  position: absolute;
-  bottom: 20%;
-  left: 40%;
-  background-color: var(--bg);
-  width: 70%;
-  height: 120%;
-  transform: rotate(75deg);
-  border-radius: 200px;
-  z-index: -1;
+  background-image: url(../images/backcover.svg);
+  background-repeat: no-repeat;
+  width: 60%;
 }
 .vector-img {
-  transform: rotate(-75deg);
-
-  position: absolute;
-  right: 25%;
-  top: 1000px;
-  bottom: 30%;
 }
 .vector-dot {
-  position: absolute;
 }
 .intro-img {
-  position: absolute;
-  width: 70%;
-  transform: rotate(-75deg);
-  right: -10%;
-  top: 250px;
-  bottom: 30%;
+}
+/* responsive design */
+@media screen and (max-width: 1140px) {
+  .nav-items {
+    display: none;
+  }
+  .logo {
+    width: 100px;
+    margin-left: 10px;
+  }
+  .signin-btn {
+    margin-right: 10px;
+  }
+}
+
+/* smaller screen */
+@media screen and (max-width: 980px) {
+  nav {
+    justify-content: space-between;
+  }
+  .vector-img {
+    display: none;
+  }
+  .vector-dot {
+    display: none;
+  }
+  .imgs-div {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: none;
+  }
+  .intro-img {
+    width: 80vw;
+  }
+  .intro-section {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0;
+  }
+  .left-section {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+  }
+  .left-section h1 {
+    margin-top: 10px;
+    font-size: 3rem;
+    width: 100%;
+  }
+  .left-section h4 {
+    line-height: normal;
+    font-size: 0.8rem;
+  }
+  .learn-more-btn {
+    font-size: 1rem;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
